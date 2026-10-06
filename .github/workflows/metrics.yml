@@ -3,6 +3,9 @@ on:
   schedule: [{cron: "0 13 * * *"}]   # 06:00 Pacific daily
   workflow_dispatch:
   push: {branches: [main]}
+concurrency:
+  group: metrics
+  cancel-in-progress: true
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -16,8 +19,9 @@ jobs:
           user: typride
           filename: github-metrics.svg
           template: classic
+          config_display: large
           config_timezone: America/Los_Angeles
-          base: header, activity, community, repositories, metadata
+          base: activity, community, repositories, metadata
           base_indepth: yes
           repositories_forks: no
           commits_authoring: typride, tylerpridemilligan@gmail.com, tyler pride milligan
