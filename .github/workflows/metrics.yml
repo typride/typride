@@ -20,14 +20,15 @@ jobs:
           base: header, activity, community, repositories, metadata
           base_indepth: yes
           repositories_forks: no
+          commits_authoring: typride, tylerpridemilligan@gmail.com, tyler pride milligan
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_lines: yes
           plugin_lines_sections: base, history
           plugin_lines_history_limit: 2
           plugin_languages: yes
-          plugin_languages_indepth: yes
+          plugin_languages_indepth: no
           plugin_languages_sections: most-used
-          plugin_languages_details: bytes-size, percentage, lines
+          plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
-          plugin_languages_analysis_timeout: 30
+          plugin_languages_ignored: jupyter notebook
