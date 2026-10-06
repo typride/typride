@@ -21,7 +21,7 @@ jobs:
           template: classic
           config_display: large
           config_timezone: America/Los_Angeles
-          base: activity, community, repositories, metadata
+          base: header, activity, community, repositories, metadata
           base_indepth: yes
           repositories_forks: no
           commits_authoring: typride, tylerpridemilligan@gmail.com, tyler pride milligan
