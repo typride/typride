@@ -11,7 +11,6 @@ Nearly all of my commits land in private repos. The cards below are regenerated 
 
 <img src="github-metrics.svg" alt="GitHub metrics: commits, lines changed, languages, calendar" width="100%">
 
-<img src="metrics.habits.svg" alt="Coding habits: active hours and days" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=typride&theme=dark&hide_border=true">
