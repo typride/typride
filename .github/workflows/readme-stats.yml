@@ -1,0 +1,46 @@
+# Weekly refresh of the hand-written numbers in README.md (the "Fun fact"
+# paragraph and notes 2-3). The cards refresh nightly in metrics.yml/snake.yml.
+# Uses the same METRICS_TOKEN; it is visible only to the dependency-free script
+# step, and the commit is pushed with the workflow's own GITHUB_TOKEN (which
+# does not re-trigger other workflows).
+name: README stats
+
+on:
+  schedule:
+    - cron: "30 14 * * 1" # Mondays 06:30 PT (after the 13:00 UTC metrics run)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-stats
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Recompute README numbers (only step with the token)
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: node scripts/update-readme-stats.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "README: weekly numbers refresh"
+          git pull --rebase origin main
+          git push
