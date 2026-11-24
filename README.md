@@ -3,7 +3,7 @@
 Building [QuarterSection](https://quartersection.com), mineral-rights data for Oklahoma owners. More about me and what I build at [tylermilligan.com](https://tylermilligan.com/r/github).
 
 <!-- funfact:start -->
-> **Fun fact, as of November 24, 2026.** 4,707 contributions in the last twelve months is more than any of 2,248 randomly sampled GitHub accounts, well past the 99th percentile <sup>[[1]](#notes)</sup>. It's also ahead of the public graphs of Linus Torvalds (4,041) and Anthony Fu (3,965) <sup>[[2]](#notes)</sup>. The popular stats-card formula grades it a B+, because it weights stars and followers heavily and nearly all of this work is private <sup>[[3]](#notes)</sup>. Big output, tiny fan club. Also 4,674 so far in 2026, after 1,017 in all of 2025.
+> **Fun fact, as of November 24, 2026.** 4,710 contributions in the last twelve months is more than any of 2,248 randomly sampled GitHub accounts, well past the 99th percentile <sup>[[1]](#notes)</sup>. It's also ahead of the public graphs of Linus Torvalds (4,041) and Anthony Fu (3,965) <sup>[[2]](#notes)</sup>. The popular stats-card formula grades it a B+, because it weights stars and followers heavily and nearly all of this work is private <sup>[[3]](#notes)</sup>. Big output, tiny fan club. Also 4,677 so far in 2026, after 1,017 in all of 2025.
 <!-- funfact:end -->
 
 Nearly all of my commits land in private repos. The cards below are regenerated nightly by GitHub Actions running with access to every repo I own, so they reflect the real volume of work, not just the public slice.
